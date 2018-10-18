@@ -19,7 +19,7 @@ public class CityImport {
     public static final String CITY_CODE = "D:/cityCode.xls";
 
     public static void main(String[] args) throws Exception {
-        String path = "C:\\Users\\2026\\Desktop\\template_发电厂.xls";
+        String path = "C:\\Users\\2026\\Desktop\\webData\\template_填埋.xls";
         cityImport(path);
     }
 
@@ -34,7 +34,7 @@ public class CityImport {
 
             for (int i = 0; i < hwb.getNumberOfSheets(); i++) {
                 sheet = hwb.getSheetAt(i);
-                for (int j = 0; j < sheet.getPhysicalNumberOfRows(); j++ ) {    //每行
+                for (int j = 0; j < sheet.getPhysicalNumberOfRows(); j++ ) {
                     row = sheet.getRow(j);
                     String s1 = row.getCell(0).toString();
                     String s2 = row.getCell(1).toString();
@@ -56,7 +56,7 @@ public class CityImport {
 
             for (int i = 0; i < hwb.getNumberOfSheets(); i++) {
                 sheet = hwb.getSheetAt(i);
-                for (int j = 1; j < sheet.getPhysicalNumberOfRows(); j++) {  //每行
+                for (int j = 1; j < sheet.getPhysicalNumberOfRows(); j++) {
                     row = sheet.getRow(j);
                     cell = row.getCell(3);
                     String s1 = cell.toString();   //目标excel的城市名称
@@ -89,16 +89,4 @@ public class CityImport {
         file.close();
     }
 
-    @Override
-    public int hashCode() {
-        return 31 * this.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return  true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        return true;
-    }
 }
