@@ -19,7 +19,7 @@ public class CityImport {
     public static final String CITY_CODE = "D:/cityCode.xls";
 
     public static void main(String[] args) throws Exception {
-        String path = "C:\\Users\\2026\\Desktop\\webData\\template_填埋.xls";
+        String path = "C:\\Users\\2026\\Desktop\\template_test.xls";
         cityImport(path);
     }
 
@@ -61,14 +61,11 @@ public class CityImport {
                     cell = row.getCell(3);
                     String s1 = cell.toString();   //目标excel的城市名称
                     for (Map.Entry<String, String> entry : map.entrySet()) {
-
                         if(s1.equals(entry.getKey())) {
                             cell.setCellValue(entry.getValue());
-                            continue;
+                            break;
                         }
-                        else {
-                            continue;
-                        }
+
                     }
                 }
                 FileOutputStream out = null;
