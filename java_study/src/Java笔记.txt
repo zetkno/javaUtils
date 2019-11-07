@@ -1,0 +1,37 @@
+1.构造器可否重写（override）
+重写是子类对父类重写，构造器不能继承，所以不能重写。
+2。重载重写区别：
+重载是方法参数列表不同，方法返回值和访问修饰符可以不同。
+重写是继承中子类对父类的重写，方法体不同，访问修饰符大于等于父类,private修饰不能访问，返回值，抛出异常小于等于父类。
+3.继承：
+子类拥有父类所有属性和方法，但是private修饰的无法访问，只是拥有
+4.StringBuffer和StringBuilder的区别，String为什么不可变
+String类是用final修饰的并且存放字符的数组也是用final修饰：private final char[] value
+StringBuffer和StringBuilder是继承AbstractStringBuilder  是用char[] value保存字符串，
+线程安全性 StringBuffer加了同步锁，StringBuilder没有同步锁
+5.default 包权限；  protected 继承权限；
+6.在一个静态方法内调用一个非静态成员为什么是非法的？
+静态方法属于类，优先于对象存在。
+7.在Java定义一个没有参数且不做事的构造函数的作用
+继承时不写super()会自动调用父类的无参构造
+8.接口和抽象类的区别
+
+
+9.构造方法没有void因为jvm识别是靠结构，为了区分与普通方法的结构
+
+Class三种实例化
+Person per = new Person();
+
+Class cls = per.getClass();
+Class cls = Person.class;
+Class cls = Class.forName("Person");
+
+
+
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath;
+%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;
+%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;
+C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;
+C:\Program Files\Lenovo\Touch Fingerprint Software\.;%JAVA_HOME%\bin; ;C:\Program Files\Git\cmd;E:\Program Files\nodejs\;D:\Users\Administrator\AppData\Local\Programs\Python\Python36;C:\Program Files (x86)\QQ\Bin
+
+%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
